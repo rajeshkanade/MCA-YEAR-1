@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #9ed2c6;
+      }
+
+      .box {
+        width: 400px;
+        height: 500px;
+        background-color: #e9dac1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 25px;
+      }
+
+      input {
+        padding: 10px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        background-color: #9ed2c6;
+        color: black;
+        font-weight: bold;
+      }
+      button {
+        padding: 5px 18px;
+        border-radius: 20px;
+        border: none;
+        color: black;
+        background-color: #9ed2c6;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+          rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+          rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+          rgba(0, 0, 0, 0.07) 0px 32px 64px;
+      }
+      button:active {
+        box-shadow: none;
+      }
+      span {
+        font-weight: normal;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="box">
+        <input type="text" id="string" placeholder="Enter String " />
+        <p id="msg"></p>
+        <button id="submit">submit</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const submit = document.getElementById("submit");
+    const msg = document.getElementById("msg");
+    submit.addEventListener("click", () => {
+        let string = document.getElementById("string").value;
+        let start = 0 , end = string.length-1;
+        let flag = 0;
+        while(start != end){
+            console.log(string[start] + " " + string[end]);
+            if(string[start] != string[end]){
+                flag = 1;
+                break;
+            }
+            start++;
+            end --;
+        }
+        if(flag){
+            console.log("string is not pallendrome")
+            msg.innerText = "string is not pallendrome";
+        }else{
+            console.log("string is pallendrome")
+            msg.innerText = "string is pallendrome";
+        }
+      
+    });
+  </script>
+</html>

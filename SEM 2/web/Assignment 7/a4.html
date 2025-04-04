@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #d4f6ff;
+      }
+
+      .box {
+        width: 400px;
+        height: 500px;
+        background-color: #8bcefd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 25px;
+      }
+
+      input {
+        padding: 10px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        background-color: #d4f6ff;
+        color: black;
+        font-weight: bold;
+      }
+      button {
+        padding: 5px 18px;
+        border-radius: 20px;
+        border: none;
+        color: black;
+        background-color: #d4f6ff;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+          rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+          rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+          rgba(0, 0, 0, 0.07) 0px 32px 64px;
+      }
+      button:active {
+        box-shadow: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="box">
+        <input type="number" id="no1" placeholder="Enter First Number" />
+        <p id="msg"></p>
+        <button id="submit">submit</button>
+      </div>
+    </div>
+    <script>
+      document.getElementById("no1").value = "";
+
+      let submit = document.getElementById("submit");
+      submit.addEventListener("click", () => {
+        let no1 = document.getElementById("no1").value;
+        if (!no1) {
+          return (document.getElementById("msg").innerHTML =
+            "Please Enter Both Numbers");
+        }
+        if (isNaN(no1)) {
+          return (document.getElementById("msg").innerHTML =
+            "Please Enter the valid Number");
+        }
+        no1 = Number.parseInt(no1);
+        console.log(no1);
+
+        if (no1 > 0) {
+          if (no1 % 3 == 0 && no1 % 7 == 0) {
+            return (document.getElementById(
+              "msg"
+            ).innerText = `${no1} is divisible by both 3 and 7`);
+          } else {
+            return (document.getElementById(
+              "msg"
+            ).innerText = `${no1} is not divisible by both 3 and 7`);
+          }
+        } else {
+          return (document.getElementById("msg").innerText =
+            "Please Enter the Positive Number");
+        }
+      });
+    </script>
+  </body>
+</html>

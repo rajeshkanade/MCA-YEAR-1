@@ -1,0 +1,71 @@
+.body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+ 
+}
+
+.box {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    width: 250px;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: rgba(117, 117, 117, 0.116);
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This will push the button to the bottom */
+    /* height: 400px; Ensure the card maintains its height */
+  }
+  .card img {
+    width: 100%;
+    height: 80%;
+    display: block;
+    margin: auto;
+  }
+  p {
+    text-align: center;
+  }
+  .card button {
+    display: block;
+    margin: auto;
+    padding: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: black;
+  }
+    .card a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+  }
+  .navbar img {
+    height: 60px; /* Adjust logo size */
+  }
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  .navbar li {
+    display: inline;
+  }
+  .navbar a {
+    color: white;
+    text-decoration: none;
+  }

@@ -1,0 +1,197 @@
+/* Add your styles here */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.attractive-heading {
+    background-color: #80d1e0; /* Light red background */
+    text-align: center; /* Center the text */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.heading ul {
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+}
+
+ul li a {
+    color: rgb(7, 6, 27);
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: all 2s; /* Added transition for smooth effect */
+
+}
+ul li a:focus , ul li a:hover{
+    text-decoration: none !important ;
+
+}
+
+
+
+
+
+ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background-color: black;
+    width: 100%;
+    height: 3px;
+    display: none;
+    transition: all 1s; /* Added transition for the underline */
+}
+
+ul li a:hover::after {
+    display: block;
+    transition-delay: 1s; /* Delay for the underline to 
+    appear */
+ 
+}
+
+.navbar .logo img {
+    max-width: 110px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.img{
+    width: 100%;
+    height: 400px;
+    background : url('courseDetails.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.img h1{
+    background-color: #80d1e0;
+    padding: 10px;
+}
+
+.container{
+    width: 100%;
+    margin-top: 50px;
+}
+
+.container .box{
+    width: 90%;
+    margin : auto;
+   
+}
+
+.box .heading-tag{
+    background-color: #80d1e0;
+    padding: 10px;
+}
+.box .content{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.box .content .card{
+   
+    padding: 20px 5px;
+    border: 1px solid rgbA(0, 0, 0, 0.1);
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+
+   
+}
+
+.card table , tr , td , th {
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+table tr td a {
+    text-decoration: none;
+    color: #1e616d;
+    font-size: 18px;
+}
+
+
+/*  footer css inbuild */
+
+footer{
+    padding: 30px 40px 30px 40px;
+    background-color: #3f3e3e;
+    font-family: Corbel;
+    font-size: 13px;/*Vary font-size as required*/
+  }
+footer a{
+    color: #b2b2b2;
+  }
+ footer  a:hover{
+    color: #fff;
+  }
+ footer  .vcard{
+    color: #b2b2b2;
+  }
+ footer ul {
+    list-style-type: none;
+  }
+  footer img{
+    display: block;
+    margin: auto;
+  }
+
+  .carousel {
+    margin-bottom: 30px;
+    position: relative;
+    max-width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    width: 100%;
+    height: 600px;
+}
+.carousel-item img {
+    width: 100%;
+    height: 600px;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 3px;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Topics</title>
+    <link rel="stylesheet" href="form-styles.css" />
+    <!-- <link rel="stylesheet" href="a1.style.css" /> -->
+
+    <style>
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 10px;
+      }
+      .navbar img {
+        height: 60px; /* Adjust logo size */
+      }
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+      }
+      .navbar li {
+        display: inline;
+      }
+      .navbar a {
+        color: white;
+        text-decoration: none;
+      }
+      h1 {
+        color: #333;
+      }
+      .book-container {
+        display: flex;
+        margin-bottom: 20px;
+        gap: 30px;
+      }
+      .book-image {
+        width: 20%;
+      }
+      .book-details {
+      }
+      .book-details h2 {
+        margin: 0;
+      }
+      .book-details p {
+        margin: 5px 0;
+      }
+      .order-form {
+        margin-top: 10px;
+      }
+      .order-form input {
+        width: 50px;
+        margin-right: 10px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      tr:hover {
+        background-color: #f5f5f5;
+      }
+      button {
+        padding: 8px;
+        border-radius: 15px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <img src="logo.png" alt="Book Web Logo" class="logo" />
+        <ul>
+          <li><a href="./a1.html">Show Books</a></li>
+          <li><a href="./book-details.html">Book Details</a></li>
+          <li><a href="./orderForm.html">Order</a></li>
+        </ul>
+      </div>
+    </nav>
+    <h1>Book Details</h1>
+    <div class="book-container">
+      <div class="book-image">
+        <img src="bookImg1.jpg" alt="Book Image" style="width: 100%" />
+      </div>
+      <div class="book-details">
+        <h2>Image of Gold</h2>
+        <p><b>Author:</b> Orient BlackSwan</p>
+        <p><b>Genre:</b> ISBN</p>
+        <p>
+          <b>Description:</b> Image of gold : an anthology for degree class is a
+          collection of literatry works compiled for undergraduate students.
+          Published in 2012 by Orient BlackSwan, the anthology spans 208 pages
+          and is available in paperback. The ISBN-13 for this edition is
+        </p>
+        <p>
+          <b>Anthology:</b> Anthology is priced at approximately $6.26 USD.
+          Please note that prices may vary based on the retailer and location.
+        </p>
+        <p><b>Reviews:</b> ★★★★☆</p>
+        <div class="order-form">
+          <input type="number" value="1" min="1" />
+          <button>
+            <a
+              href="./orderForm.html"
+              style="text-decoration: none; color: white"
+              >Add To Cart</a
+            >
+          </button>
+          <button>
+            <a
+              href="./orderForm.html"
+              style="text-decoration: none; color: white"
+              >Place Order</a
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+    <h1>List of Book Topics</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Topic</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Fiction</td>
+          <td>
+            Literary works invented by the imagination, such as novels and short
+            stories.
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Non-Fiction</td>
+          <td>
+            Informative works based on facts, real events, and real people.
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Science</td>
+          <td>
+            Books that explore scientific concepts, discoveries, and theories.
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>History</td>
+          <td>Works that recount historical events and figures.</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Biography</td>
+          <td>
+            Detailed descriptions of a person's life, including their
+            experiences and achievements.
+          </td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Fantasy</td>
+          <td>
+            Fictional works set in imaginary worlds with magical elements.
+          </td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Self-Help</td>
+          <td>Books aimed at personal development and self-improvement.</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Technology</td>
+          <td>
+            Books that discuss technological advancements and their impact on
+            society.
+          </td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Travel</td>
+          <td>
+            Works that explore different cultures, places, and travel
+            experiences.
+          </td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Cooking</td>
+          <td>Books that provide recipes and cooking techniques.</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

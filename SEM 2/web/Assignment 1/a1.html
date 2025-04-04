@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 1</title>
+    <style>
+      body {
+        position: relative;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .home {
+        width: 100%;
+        height: 100vh;
+        background: rgb(156, 134, 156);
+      }
+      .navbar {
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding: 20px 10px;
+        font-size: 20px;
+      }
+      .navbar ul {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      .navbar ul li {
+        list-style-type: none;
+        cursor: pointer;
+      }
+
+      .footer {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 10px 0;
+        background-color: black;
+      }
+      .footer p {
+        color: white;
+        text-align: center;
+      }
+
+      .box {
+        width: 80%;
+        margin: 20px auto;
+        border: 2px solid purple;
+      }
+
+      .box1 {
+        display: flex;
+        justify-content: space-between;
+      }
+      .profile {
+        border-radius: 50%;
+      }
+
+      .info {
+        margin: 10px;
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+      }
+      .quali {
+        margin: 10px;
+      }
+      .quali-table {
+        margin: auto;
+        width: 40%;
+      }
+
+      table,
+      tr,
+      td,
+      th {
+        border: 1px solid black;
+        padding: 5px;
+        border-collapse: collapse;
+      }
+
+      .hobbies {
+        margin: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .hobbies ul {
+        margin: 20px;
+      }
+
+      img {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="home">
+      <div class="navbar">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Portfolio</li>
+          <li>
+            <a href="./a2.html" style="text-decoration: none; color: white"
+              >Login</a
+            >
+          </li>
+          <li>
+            <a href="./a5.html" style="text-decoration: none; color: white"
+              >Cities</a
+            >
+          </li>
+          <li>
+            <a
+              href="./a4.html"
+              style="text-decoration: none; color: white"
+              >Formatting</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="main">
+        <h1>This is Home Page</h1>
+        <div class="box">
+          <div class="box1">
+            <div class="img">
+              <img
+                src="profile.png"
+                class="profile"
+                alt="profile"
+                height="100%"
+              />
+            </div>
+            <div class="info">
+              <h4>About ME :</h4>
+              <br />
+              <p><b>Name :</b> Rajesh Kanade</p>
+              <p><b>About Me :</b> I am MERN STACK DEVELOPER</p>
+              <p>
+                <b>Something about me :</b> Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Doloremque libero, porro, sint
+                laudantium labore nostrum dignissimos atque nemo dolor alias
+                minima unde ab aliquam nesciunt? Ipsum placeat illum libero
+                fugit?
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div class="quali">
+            <h4>Qualification :</h4>
+            <br />
+            <div class="quali-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>University/Board</th>
+                    <th>Class</th>
+                    <th>Percentage</th>
+                    <th>Passing Year</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>SPPU</td>
+                    <td>BCS</td>
+                    <td>87.30%</td>
+                    <td>2024</td>
+                  </tr>
+                  <tr>
+                    <td>HSC</td>
+                    <td>12th</td>
+                    <td>80.30%</td>
+                    <td>2021</td>
+                  </tr>
+                  <tr>
+                    <td>SSC</td>
+                    <td>10th</td>
+                    <td>84.80%</td>
+                    <td>2019</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <hr />
+          <div class="hobbies">
+            <div class="left">
+              <h4>Hobbies :</h4>
+              <ul>
+                <li>Lorem, ipsum dolor.</li>
+                <li>Lorem, ipsum dolor. Lorem.</li>
+                <li>Lorem, ipsum</li>
+              </ul>
+            </div>
+            <div class="right">
+              <a href="http://firefox.com" target="_blank">
+                <img
+                  src="chrome://branding/content/about-logo.png"
+                  alt="firefox"
+                  height="100px"
+                  width="100px"
+                  id="img"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <p>All Right reserve @rajeshkanade</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box {
+        width: 450px;
+        height: 600px;
+        background-color: yellowgreen;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 45px;
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="date1">
+          <p>mm-dd-yyyy : <span id="date1"></span></p>
+          <p>mm/dd/yyyy : <span id="date2"></span></p>
+          <p>dd/mm/yyyy : <span id="date3"></span></p>
+        </div>
+        <div class="date1">
+          <p>today is : <span id="Day"></span></p>
+          <p>Current Time is : <span id="Time"></span></p>
+        </div>
+        <div id="ind"></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const date = Date.now();
+    const date1 = new Date(date);
+    const time = date1.getTime();
+    const todayDate = date1.getDate();
+    const todayDay = date1.getDay();
+    const todayMonth = date1.getMonth();
+    const todayYear = date1.getFullYear();
+    const getDayName = (dayNumber) => {
+      switch (dayNumber) {
+        case 1:
+          return "Monday";
+
+        case 2:
+          return "Tuesday";
+
+        case 3:
+          return "Wednesday";
+        case 4:
+          return "Thursday";
+
+        case 5:
+          return "Friday";
+
+        case 6:
+          return "Saturday";
+        case 7:
+          return "Sunday";
+      }
+    };
+    document.getElementById(
+      "date1"
+    ).innerText = `${todayMonth} - ${todayDate} - ${todayYear}`;
+
+
+    document.getElementById(
+      "date2"
+    ).innerText = `${todayMonth} / ${todayDate} / ${todayYear}`;
+
+
+    document.getElementById(
+      "date3"
+    ).innerText = `${todayDate} - ${todayMonth} - ${todayYear}`;
+
+    document.getElementById("Day").innerText = getDayName(todayDay);
+
+
+        const updateTime = () => {
+            const date = new Date();
+        let hour = date.getHours();
+        let minutes = date.getMinutes();
+        let second = date.getSeconds();
+        
+        if (hour == 12) {
+            hour =  12 + " PM";
+        } else if(hour > 12 ){
+            hour = hour - 12 + " PM ";
+        }else{
+            hour = hour + " AM";
+        }
+        
+        document.getElementById("Time").innerText = hour + " : " + minutes + " : " + second;
+    };
+
+    // Initial call to set the time immediately
+    updateTime();
+    
+    // Update time every second
+    setInterval(updateTime, 1000);
+</script>
+   
+  </script>
+</html>

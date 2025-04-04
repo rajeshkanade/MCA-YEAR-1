@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Here </title>
+    <style>
+        .main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(180, 214, 214);
+            flex-direction: column;
+        }
+
+        .login{
+            border: 2px solid brown;
+            background-color: rgb(192, 123, 123);
+            width: 30%;
+            padding: 20px;
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .login input{
+            border: none ;
+            outline: none;
+            padding: 10px;
+            font-size: 18px;
+        }
+        button{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+            <h2>login form</h2>
+            <form action="#" class="login">
+                <input type="text" placeholder="Enter Username">
+                <input type="password" placeholder="Enter Password">
+                <a href="#">Forget Password</a>
+                <button>Log In</button>
+            </form>
+    </div>
+</body>
+</html>

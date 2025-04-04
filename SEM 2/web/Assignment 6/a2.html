@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        width: 400px;
+        height: 300px;
+        background-color: #b7d17b;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 18px;
+
+        align-items: center;
+      }
+
+      button {
+        border: none;
+        outline: none;
+        padding: 10px;
+        border-radius: 15px;
+        background-color: #648f00;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h5>String is : <span id="String"></span></h5>
+        <h5>Reverse String is : <span id="RevString"></span></h5>
+        <button onclick="changeString()">For New String ( CLICK )</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    let str = "Hello World";
+    document.getElementById("String").innerText = str;
+    let strrev = "";
+    
+    for (let c in str) {
+      strrev = strrev + str[str.length - c - 1];
+    }
+    console.log(strrev);
+    document.getElementById("RevString").innerText = strrev;
+    
+    const changeString = () => {
+      let name = prompt("Enter the string : ");
+      str = name;
+      document.getElementById("String").innerText = str;
+      strrev=""
+    for (let c in str) {
+      strrev = strrev + str[str.length - c - 1];
+    }
+    console.log(strrev);
+    document.getElementById("RevString").innerText = strrev;
+
+    };
+
+
+  
+
+  </script>
+</html>

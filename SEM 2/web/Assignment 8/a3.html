@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+
+            justify-content: center
+            ;
+            align-items: center
+            ;
+            flex-direction: column;
+        }
+        .main-box{
+            width: 400px;
+            height: 400px;
+            background-color: #ababab;
+            border-radius: 20px;
+        }
+        .sub-box{
+            width: 100%;
+            height: 80%;
+            background-color: bisque;
+            border-radius: 20px;
+
+
+        }
+        button{
+            padding: 10px 30px;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            display: block;
+            /* margin-top: 20px; */
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="main-box">
+            <div class="sub-box" id="box">
+
+            </div>
+            <button id="btn">
+                Double Click to Random Color
+            </button>
+        </div>
+    </div>
+</body>
+<script>
+     var colorArray = [
+        "#FF6633",
+        "#FFB399",
+        "#FF33FF",
+        "#FFFF99",
+        "#00B3E6",
+        "#E6B333",
+        "#3366E6",
+        "#999966",
+        "#809980",
+        "#E6FF80",
+        "#1AFF33",
+        "#999933",
+        "#FF3380",
+        "#CCCC00",
+        "#66E64D",
+        "#4D80CC",
+        "#FF4D4D",
+        "#99E6E6",
+        "#6666FF"
+    ];
+    let btn = document.getElementById("btn");
+    btn.addEventListener('dblclick' , ()=>{
+        
+        let color = colorArray[Math.floor(Math.random() * colorArray.length)];
+        console.log(color);
+        document.getElementById("box").style.backgroundColor = color;
+    })
+</script>
+</html>
