@@ -1,3 +1,14 @@
+// Question: Write a C program to manage two sets of students who like two different flavors of ice cream: Vanilla and Butterscotch. 
+// The program should allow the user to perform the following operations:
+// 1. Add students to the Vanilla set.
+// 2. Add students to the Butterscotch set.
+// 3. Display the set of students who like either Vanilla or Butterscotch or both.
+// 4. Display the set of students who like both Vanilla and Butterscotch.
+// 5. Display the set of students who like only Vanilla and not Butterscotch.
+// 6. Display the set of students who like only Butterscotch and not Vanilla.
+// 7. Print the details of both sets.
+// 8. Exit the program.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -92,6 +103,38 @@ void printALL(Student *setA , Student *setB){
             tempB = tempB->next;
         }
         }
+}
+
+void printVanillaAndButterScotch(Student *setA , Student *setB){
+    Student *tempA = setA;
+    Student *tempB = setB;
+    while(tempA != NULL && tempB != NULL){
+        if(tempA->rollNo < tempB->rollNo){
+            tempA = tempA->next;
+        }else if(tempB->rollNo < tempA->rollNo){
+            tempB = tempB->next;
+        }else{
+            printOneStudent(tempA, tempA->rollNo);
+            tempA = tempA->next;
+            tempB = tempB->next;
+        }
+    }
+}
+
+void printLikeBoth(Student *setA , Student *setB){
+    Student *tempA = setA;
+    Student *tempB = setB;
+    while(tempA != NULL && tempB != NULL){
+        if(tempA->rollNo < tempB->rollNo){
+            tempA = tempA->next;
+        }else if(tempB->rollNo < tempA->rollNo){
+            tempB = tempB->next;
+        }else{
+            printOneStudent(tempA, tempA->rollNo);
+            tempA = tempA->next;
+            tempB = tempB->next;
+        }
+    }
 }
 int main()
 {

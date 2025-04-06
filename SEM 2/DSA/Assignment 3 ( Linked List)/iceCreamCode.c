@@ -198,6 +198,19 @@ int main() {
                 break;
             case 3:
                 intersectionSets(vanillaSet, butterscotchSet);
+                break;
+            case 4:
+                differenceVanilla(vanillaSet, butterscotchSet);
+                break;
+            case 5:
+                differenceButterscotch(vanillaSet, butterscotchSet);
+                break;
+            case 6:
+                displayAllStudents(vanillaSet, butterscotchSet);
+                break;
+            case 7:
+                printf("Exiting...\n");
+                break;
             default:
                 printf("Invalid option! Please try again.\n");
         }

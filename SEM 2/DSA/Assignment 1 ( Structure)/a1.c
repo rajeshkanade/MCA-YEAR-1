@@ -20,12 +20,11 @@ void getStud(Student *s){
 }
 
 void disStud(Student s){
-    float avg ;
+    float avg = 0.0;
     printf("\n%d\t%s\t",s.rollNo,s.name);
     for(int i = 0 ; i < 3 ; i++){
         avg += s.marks[i];
-        printf("%d  ",s.marks[i]);
-        
+        printf("%d  ",s.marks[i]);   
     }
     printf("\t\t%.2f",(avg/3));
     printf("\n");
@@ -39,18 +38,6 @@ int main(){
     printf("\n--------------------------------------------------------------");
     disStud(s); 
 
+
     return 0;
-}           case 1:
-                getStud(&s);
-                break;
-            case 2:
-                disStud(s);
-                break;
-            case 3:
-                printf("Exiting the program.\n");
-                return 0;
-            default:
-                printf("Invalid choice. Please try again.\n");
-        }
-    }
-}
+}          

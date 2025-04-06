@@ -1,3 +1,18 @@
+/**
+ * @brief Implementation of a singly linked list with various operations such as insertion, deletion, and traversal.
+ *
+ * This program provides a menu-driven interface to perform the following operations on a singly linked list:
+ * 1. Create a single node.
+ * 2. Create a linked list with multiple nodes.
+ * 3. Insert a node at the beginning of the list.
+ * 4. Insert a node at the end of the list.
+ * 5. Insert a node at a specific position in the list.
+ * 6. Delete a node from the beginning of the list.
+ * 7. Delete a node from the end of the list.
+ * 8. Delete a node from a specific position in the list.
+ * 9. Display the linked list.
+ * 0. Exit the program.
+ */
 #include <stdio.h>
 #include <stdlib.h>
 typedef struct Node

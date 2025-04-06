@@ -1,3 +1,13 @@
+/*
+Question:
+Write a C program to perform the following operations on a singly linked list:
+1. Create a linked list with `n` nodes, where the data for each node is provided by the user.
+2. Display the elements of the linked list.
+3. Create a copy of the linked list and display the copied list.
+4. Create a new linked list containing only the positive integers from the original list and display it.
+5. Create another linked list containing only the negative integers from the original list and display it.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 typedef struct Node

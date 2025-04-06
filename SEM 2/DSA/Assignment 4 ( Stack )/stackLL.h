@@ -7,7 +7,13 @@ typedef struct node
     struct node *next;
 }node;
 
-#define NEWNODE (node*)malloc(sizeof(node))
+node* createNode(int data)
+{
+    node* newNode = (node*)malloc(sizeof(node));
+    newNode->data = data;
+    newNode->next = NULL;
+    return newNode;
+}
 
 
 int isEmpty(node* head)
@@ -21,9 +27,8 @@ node* push(node* head,int x)
 {
     node* temp;
 
-    temp = NEWNODE;
-    temp->data = x;
-    temp->next = NULL;
+    node* newNode = createNode(x);
+    temp = newNode;
 
     if(head==NULL)
     {

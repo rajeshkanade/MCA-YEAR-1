@@ -1,3 +1,11 @@
+// Question: 
+// Write a C program to perform the following operations on singly linked lists:
+// 1. Create two separate linked lists (List 1 and List 2).
+// 2. Print the elements of each list.
+// 3. Merge the two lists into a single sorted list and print the result.
+// 4. Merge the two lists into a single sorted list with unique elements and print the result.
+// 5. Provide a menu-driven interface for the user to perform these operations.
+
 #include <stdio.h>
 #include <stdlib.h>
 typedef struct Node

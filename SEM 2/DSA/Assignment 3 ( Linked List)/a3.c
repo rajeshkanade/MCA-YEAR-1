@@ -1,3 +1,18 @@
+// Question: 
+// Write a C program to implement a doubly linked list with the following functionalities:
+// 1. Create a linked list with user-specified number of nodes.
+// 2. Insert a node at the beginning of the list.
+// 3. Insert a node at the end of the list.
+// 4. Insert a node at a specific position in the list.
+// 5. Delete a node from the beginning of the list.
+// 6. Delete a node from the end of the list.
+// 7. Delete a node from a specific position in the list.
+// 8. Search for a node with a specific value in the list.
+// 9. Print the entire list.
+// 10. Reverse the list and display it.
+// 11. Exit the program.
+// The program should provide a menu-driven interface for the user to perform these operations.
+
 #include <stdio.h>
 #include <stdlib.h>
 

@@ -1,3 +1,15 @@
+/*
+ * This code implements a circular singly linked list in C with various operations.
+ * 
+ * 
+ * Question:
+ * Write a C program to implement a circular singly linked list with the following functionalities:
+ * - Create a circular linked list with user-specified nodes.
+ * - Insert a node at the beginning, end, or a specific position in the list.
+ * - Delete a node from the beginning, end, or a specific position in the list.
+ * - Print the contents of the circular linked list.
+ * - Provide a menu-driven interface for the user to interact with the list.
+ */
 #include <stdio.h>
 #include <stdlib.h>
 
