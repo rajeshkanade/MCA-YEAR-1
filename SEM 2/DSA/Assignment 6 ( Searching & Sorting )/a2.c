@@ -1,3 +1,9 @@
+// Question:
+// Write a C program to read a list of records containing names and ages from an input file,
+// sort the records alphabetically by name using the Merge Sort algorithm, 
+// and write the sorted records to an output file. 
+// Ensure the program handles a maximum of 1000 records and includes error handling for file operations.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -10,19 +16,19 @@ typedef struct {
     int age;
 } Record;
 
-void merge(Record arr[], int left, int mid, int right) {
-    int n1 = mid - left + 1;
-    int n2 = right - mid;
+void merge(Record arr[], int low, int mid, int high) {
+    int n1 = mid - low + 1;
+    int n2 = high - mid;
 
     Record *L = (Record *)malloc(n1 * sizeof(Record));
     Record *R = (Record *)malloc(n2 * sizeof(Record));
 
     for (int i = 0; i < n1; i++)
-        L[i] = arr[left + i];
+        L[i] = arr[low + i];
     for (int j = 0; j < n2; j++)
         R[j] = arr[mid + 1 + j];
 
-    int i = 0, j = 0, k = left;
+    int i = 0, j = 0, k = low;
     while (i < n1 && j < n2) {
         if (strcmp(L[i].name, R[j].name) <= 0) {
             arr[k] = L[i];
@@ -50,14 +56,14 @@ void merge(Record arr[], int left, int mid, int right) {
     free(R);
 }
 
-void mergeSort(Record arr[], int left, int right) {
-    if (left < right) {
-        int mid = left + (right - left) / 2;
+void mergeSort(Record arr[], int low, int high) {
+    if (low < high) {
+        int mid = low + high  / 2;
 
-        mergeSort(arr, left, mid);
-        mergeSort(arr, mid + 1, right);
+        mergeSort(arr, low, mid);
+        mergeSort(arr, mid + 1, high);
 
-        merge(arr, left, mid, right);
+        merge(arr, low, mid, high);
     }
 }
 
