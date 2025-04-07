@@ -1,3 +1,19 @@
+/**
+ * Assignment 5 - Question 2
+ * 
+ * Create a Java Swing application to search student marks by roll number and name.
+ * The application should:
+ * - Store student data (name, subjects, CE marks, ESE marks) in a HashMap
+ * - Provide input fields for roll number and name
+ * - Display matching student records in a table with subject-wise marks
+ * - Calculate and display total marks (CE + ESE) for each subject
+ * 
+ * Features:
+ * - Uses JFrame with BorderLayout
+ * - Input validation for empty fields
+ * - JTable to display results
+ * - ActionListener for search button
+ */
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;

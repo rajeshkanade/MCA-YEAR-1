@@ -1,3 +1,18 @@
+/**
+ * Assignment 5 - Question 3
+ * 
+ * Create a Java Swing application to display all available font families on the system.
+ * The application should:
+ * - Use GraphicsEnvironment to get available font families
+ * - Display the fonts in a scrollable JTextArea
+ * - Show the fonts in a JFrame window
+ * 
+ * Features:
+ * - Uses JFrame with BorderLayout
+ * - Non-editable JTextArea for display
+ * - JScrollPane for scrolling through fonts
+ * - SwingUtilities.invokeLater for thread safety
+ */
 import javax.swing.*;
 import java.awt.*;
 import java.awt.GraphicsEnvironment;

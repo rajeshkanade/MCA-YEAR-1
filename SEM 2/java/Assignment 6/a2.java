@@ -1,3 +1,28 @@
+/**
+ * Assignment 6 - Question 2
+ * 
+ * Create a Java application for Student/Alumni Management System that:
+ * - Connects to MySQL database (RAJESH28)
+ * - Provides CRUD operations (Create, Read, Update, Delete)
+ * - Includes input validation for all fields
+ * - Implements search functionality with multiple criteria
+ * 
+ * Features:
+ * - Interactive menu-driven interface
+ * - Dynamic SQL query generation for updates
+ * - Comprehensive field validation (name, email, contact, etc.)
+ * - Table creation if not exists
+ * - Proper error handling and user feedback
+ * 
+ * Database Schema:
+ * - Table: student_alumni
+ * - Fields: id, name, address, designation, contact_no, email, year
+ * 
+ * Connection Details:
+ * - URL: jdbc:mysql://192.168.28.3:3306/RAJESH28
+ * - Username: mca28
+ * - No password required
+ */
 import java.sql.*;
 import java.util.Scanner;
 import java.util.regex.*;

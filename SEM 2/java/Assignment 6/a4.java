@@ -1,3 +1,29 @@
+/**
+ * Assignment 6 - Question 4
+ * 
+ * Create a Java Swing application that:
+ * - Connects to MySQL database (RAJESH28)
+ * - Displays student records (rollNo, name, totalMarks) from 'students' table
+ * - Provides navigation controls (First, Previous, Next, Last)
+ * - Shows current record position
+ * 
+ * Features:
+ * - JDBC database connection
+ * - Scrollable ResultSet for navigation
+ * - Editable text fields disabled
+ * - Record counter display
+ * - Button state management
+ * - Error handling with user feedback
+ * 
+ * Database Schema:
+ * - Table: students
+ * - Fields: rollNo, name, totalMarks
+ * 
+ * Connection Details:
+ * - URL: jdbc:mysql://192.168.28.3:3306/RAJESH28
+ * - Username: mca28
+ * - No password required
+ */
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;

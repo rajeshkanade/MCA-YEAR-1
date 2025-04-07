@@ -1,3 +1,21 @@
+/**
+ * Assignment 5 - Question 5
+ * 
+ * Create a Java Swing application for font customization that:
+ * - Displays available system fonts in a JComboBox
+ * - Allows selecting font size via text field
+ * - Provides checkboxes for bold and italic styles
+ * - Applies selected font to a sample text field
+ * - Includes validation for font size input
+ * 
+ * Features:
+ * - Uses JFrame with GridLayout
+ * - JComboBox for font family selection
+ * - Checkboxes for font style selection
+ * - Apply and Exit buttons
+ * - ActionListener for button events
+ * - Font class for style manipulation
+ */
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;

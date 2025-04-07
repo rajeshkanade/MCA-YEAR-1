@@ -1,3 +1,19 @@
+/**
+ * Assignment 5 - Question 4
+ * 
+ * Create a Java Swing application for number system conversion that:
+ * - Takes a decimal number as input
+ * - Converts it to binary, octal, and hexadecimal formats
+ * - Displays all conversions simultaneously
+ * - Includes input validation and error handling
+ * 
+ * Features:
+ * - Uses JFrame with GridLayout
+ * - Text fields for decimal input and converted outputs
+ * - Convert and Exit buttons
+ * - ActionListener for button events
+ * - NumberFormatException handling
+ */
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;

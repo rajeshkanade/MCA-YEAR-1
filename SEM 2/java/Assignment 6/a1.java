@@ -1,3 +1,23 @@
+/**
+ * Assignment 6 - Question 1
+ * 
+ * Create a Java application that connects to a MySQL database and provides:
+ * - Database metadata information (name, version, driver info)
+ * - Listing of all tables in the database
+ * - Detailed column information for any specified table
+ * 
+ * Features:
+ * - Uses JDBC to connect to MySQL database
+ * - Implements interactive menu system
+ * - Utilizes DatabaseMetaData for schema information
+ * - Includes ResultSetMetaData for table details
+ * - Proper connection handling and error management
+ * 
+ * Database Connection Details:
+ * - URL: jdbc:mysql://192.168.28.3:3306/RAJESH28
+ * - Username: mca28
+ * - No password required
+ */
 import java.sql.*;
 import java.util.Scanner;
 

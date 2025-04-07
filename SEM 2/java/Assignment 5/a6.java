@@ -1,3 +1,20 @@
+/**
+ * Assignment 5 - Question 6
+ * 
+ * Create a Java Swing application with a file menu that:
+ * - Implements a menu bar with File menu
+ * - Includes New, Open, Save, and Exit menu items
+ * - Uses JFileChooser for file selection
+ * - Displays file content in a JTextArea
+ * - Handles file operations and exceptions
+ * 
+ * Features:
+ * - JMenuBar with JMenu and JMenuItems
+ * - ActionListeners for menu items
+ * - JTextArea with JScrollPane
+ * - File reading functionality
+ * - Proper window closing behavior
+ */
 import javax.swing.*;
 import java.awt.event.*;
 import java.io.*;

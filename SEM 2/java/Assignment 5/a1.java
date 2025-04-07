@@ -1,4 +1,5 @@
 // design a login screen having username and password filed  and also submit and cancel button
+// if username and password both are equal then only you can login otherwise you will get an error message
 
 import javax.swing.*;
 import java.awt.*;

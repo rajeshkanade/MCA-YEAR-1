@@ -1,3 +1,28 @@
+/**
+ * Assignment 6 - Question 3
+ * 
+ * Create a Java application that:
+ * - Connects to MySQL database (RAJESH28)
+ * - Creates a 'books' table with fields: id, book_name, author, ISBN_no, price
+ * - Populates the table with 5 sample book records
+ * 
+ * Features:
+ * - Uses JDBC for database operations
+ * - Auto-increment primary key
+ * - Unique ISBN constraint
+ * - Proper decimal handling for prices
+ * - Error handling for duplicate ISBNs
+ * 
+ * Database Schema:
+ * - Table: books
+ * - Fields: id (INT), book_name (VARCHAR), author (VARCHAR), 
+ *           ISBN_no (VARCHAR), price (DECIMAL)
+ * 
+ * Connection Details:
+ * - URL: jdbc:mysql://192.168.28.3:3306/RAJESH28
+ * - Username: mca28
+ * - No password required
+ */
 import java.sql.*;
 import java.util.Scanner;
 

@@ -1,3 +1,28 @@
+/**
+ * Assignment 6 - Question 5
+ * 
+ * Create a Java Swing application for Student Record Management that:
+ * - Connects to MySQL database (RAJESH28)
+ * - Provides CRUD operations (Create, Read, Update, Delete)
+ * - Includes search functionality by roll number
+ * - Validates input fiel   qds
+ * 
+ * Features:
+ * - Swing GUI with form fields and action buttons
+ * - Database table creation if not exists
+ * - Input validation for all fields
+ * - Confirmation dialogs for delete operations
+ * - Error handling with user feedback
+ * 
+ * Database Schema:
+ * - Table: students
+ * - Fields: rollNo (VARCHAR, PK), name (VARCHAR), totalMarks (INT)
+ * 
+ * Connection Details:
+ * - URL: jdbc:mysql://192.168.28.3:3306/RAJESH28
+ * - Username: mca28
+ * - No password required
+ */
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
