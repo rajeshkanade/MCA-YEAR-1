@@ -1,3 +1,7 @@
+// Question: Write a Java program to implement an abstract class `Staff` with attributes `name` and `address`. 
+// Create two subclasses `FullTimeStaff` and `PartTimeStaff` with additional attributes specific to each type. 
+// Use an array to store multiple objects of these subclasses and display their details based on user input.
+
 import java.util.*;
 abstract class Staff{
     String name ,  address;
@@ -14,7 +18,7 @@ class FullTimeStaff extends Staff{
     FullTimeStaff(String name, String address , String department , double salary){
             // this.name = name;
             // this.address = address;
-        super(name,address)    ;
+        super(name,address);
         this.department = department;
         this.salary = salary;
     }
@@ -94,4 +98,3 @@ public class a3{
 
     }
 }
-

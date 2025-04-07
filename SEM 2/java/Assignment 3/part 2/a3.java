@@ -1,3 +1,11 @@
+// Question: Write a Java program to create a class hierarchy for vehicles. 
+// The base class `Vehicle` should have attributes for company and price. 
+// Create two derived classes `LMV` (Light Motor Vehicle) and `HMV` (Heavy Motor Vehicle). 
+// The `LMV` class should include mileage, and the `HMV` class should include capacity in tons. 
+// Implement a program to input details of multiple vehicles, store them in an array, 
+// and display the details of LMVs and HMVs separately.
+
+// Code:
 import java.util.Scanner;
 
 class Vehicle{

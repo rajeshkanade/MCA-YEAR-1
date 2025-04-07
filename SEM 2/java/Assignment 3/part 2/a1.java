@@ -1,3 +1,10 @@
+// Question:
+// Write a Java program to perform the following operations on an array using an interface:
+
+// Reverse the Array: Implement a method to reverse the elements of the array.
+// Copy the Array: Implement a method to create a copy of the array.
+// Find the Maximum Element: Implement a method to find the maximum element in the array.
+
 import java.util.Scanner;
 interface Java_Array{
     void array_reverse();

@@ -1,3 +1,7 @@
+// Question: Write a Java program to create a custom thread class that extends the Thread class. 
+// The thread should display its message, name, ID, priority, and state in an infinite loop with a 1-second delay between iterations. 
+// Create two threads with different messages and names, and start them from the main method.
+
 class MyThread extends Thread{
     private String message;
     MyThread(String message , String name){

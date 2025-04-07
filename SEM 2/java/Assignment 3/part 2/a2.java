@@ -1,3 +1,33 @@
+// Question:
+// Write a Java program to implement a credit card system using an interface and inheritance.
+// Requirements:
+// Interface:
+
+// Define CreditCardInterface with methods:
+// viewCreditAmount(): View current credit amount.
+// useCard(double amount): Use the card for a transaction.
+// payCredit(double amount): Pay the credit balance.
+// increaseLimit(double amount): Increase the credit limit.
+// SilverCardCustomer:
+
+// Implements CreditCardInterface.
+// Attributes: name, cardNumber, creditAmount, creditLimit (default: 50,000).
+// Methods:
+// Allow transactions within the credit limit.
+// Allow payments up to the current credit balance.
+// Display a message for limit increase (not applicable).
+// GoldCardCustomer:
+
+// Extends SilverCardCustomer.
+// Overrides increaseLimit:
+// Allow up to 3 increases, each ≤ 5,000.
+// Default credit limit: 1,00,000.
+// Main Class:
+
+// Create objects for SilverCardCustomer and GoldCardCustomer.
+// Demonstrate all operations (view credit, use card, pay credit, increase limit).
+
+
 interface CreditCardInterface {
     void viewCreditAmount();
     void useCard(double amount);

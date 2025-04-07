@@ -1,3 +1,4 @@
+// Question: Write a multithreaded Java program where 10 threads generate 100 random numbers each, calculate their sum, and compute the total sum and average of all generated numbers.
 
 import java.util.*;
 class thread extends Thread{
