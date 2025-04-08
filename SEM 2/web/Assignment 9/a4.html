@@ -1,5 +1,23 @@
-<!-- create the image gallery using javascript
-The image gallery will display all the image in small size and when you click on the particular image it will expand and you can see it in lare size. 
-to create this we will first use the css gird property to make all the images in gird layout by creating a simple html structure. 
-After desinging the basic html structure we will use css propertiess to make image responsive. 
-Now, we will use the css transform and cursor zoom in property , to view the image in full size when you click on the particular image -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="a4Style.css">
+</head>
+<body>
+    <div class="gallery-container">
+        <h1>Photo Gallery</h1>
+        <div class="gallery-grid" id="gallery">
+            <!-- Images will be added dynamically via JavaScript -->
+        </div>
+        <div class="modal" id="modal">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div class="caption" id="caption"></div>
+        </div>
+    </div>
+    <script src="a5Js.js"></script>
+</body>
+</html>

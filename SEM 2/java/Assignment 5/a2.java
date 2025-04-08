@@ -121,7 +121,7 @@ class StudentMarksSearch {
     }
 }
 
-public class a2new {
+public class a2 {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             StudentMarksSearch sms = new StudentMarksSearch();

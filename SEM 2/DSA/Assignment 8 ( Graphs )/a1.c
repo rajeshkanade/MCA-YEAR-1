@@ -1,5 +1,21 @@
 #include <stdio.h>
 
+/*
+Example Input for this program:
+1. First enter number of vertices (e.g., 4)
+2. Then enter number of edges (e.g., 5)
+3. Then enter edges as source and destination pairs (0-based indexing):
+   0 1
+   1 2 
+   2 3
+   3 0
+   0 2
+
+This represents a directed graph with:
+- 4 vertices (0,1,2,3)
+- 5 edges: 0→1, 1→2, 2→3, 3→0, 0→2
+*/
+
 #define MAX 100
 
 void createAdjMatrix(int adjMatrix[MAX][MAX], int vertices, int edges) {

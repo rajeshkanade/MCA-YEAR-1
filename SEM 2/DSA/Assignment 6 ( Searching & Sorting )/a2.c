@@ -58,7 +58,7 @@ void merge(Record arr[], int low, int mid, int high) {
 
 void mergeSort(Record arr[], int low, int high) {
     if (low < high) {
-        int mid = low + high  / 2;
+        int mid = (low + high) / 2;
 
         mergeSort(arr, low, mid);
         mergeSort(arr, mid + 1, high);

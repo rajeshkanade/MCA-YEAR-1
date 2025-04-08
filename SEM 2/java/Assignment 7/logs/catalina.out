@@ -425,3 +425,46 @@ Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class 
 07-Apr-2025 13:07:07.448 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
 07-Apr-2025 13:07:07.455 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 797 ms
 Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+08-Apr-2025 11:22:06.031 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.76
+08-Apr-2025 11:22:06.032 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 23 2022 17:59:11 UTC
+08-Apr-2025 11:22:06.032 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.76.0
+08-Apr-2025 11:22:06.032 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+08-Apr-2025 11:22:06.032 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.18.0-348.7.1.el8_5.x86_64
+08-Apr-2025 11:22:06.032 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+08-Apr-2025 11:22:06.032 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-2.el8_5.x86_64/jre
+08-Apr-2025 11:22:06.032 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_312-b07
+08-Apr-2025 11:22:06.032 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Red Hat, Inc.
+08-Apr-2025 11:22:06.032 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /exportspg/mca28/Rajesh's code/SEM 2/java/Assignment 7
+08-Apr-2025 11:22:06.032 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /exportspg/mca28/Rajesh's code/SEM 2/java/Assignment 7
+08-Apr-2025 11:22:06.032 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/exportspg/mca28/Rajesh's code/SEM 2/java/Assignment 7/conf/logging.properties
+08-Apr-2025 11:22:06.032 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+08-Apr-2025 11:22:06.032 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+08-Apr-2025 11:22:06.032 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+08-Apr-2025 11:22:06.033 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+08-Apr-2025 11:22:06.033 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+08-Apr-2025 11:22:06.037 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/exportspg/mca28/Rajesh's code/SEM 2/java/Assignment 7
+08-Apr-2025 11:22:06.037 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/exportspg/mca28/Rajesh's code/SEM 2/java/Assignment 7
+08-Apr-2025 11:22:06.037 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/exportspg/mca28/Rajesh's code/SEM 2/java/Assignment 7/temp
+08-Apr-2025 11:22:06.037 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+08-Apr-2025 11:22:06.095 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+08-Apr-2025 11:22:06.105 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 395 ms
+08-Apr-2025 11:22:06.123 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+08-Apr-2025 11:22:06.123 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.76]
+08-Apr-2025 11:22:06.130 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/exportspg/mca28/Rajesh's code/SEM 2/java/Assignment 7/webapps/examples]
+08-Apr-2025 11:22:06.597 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Apr-2025 11:22:06.656 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/exportspg/mca28/Rajesh's code/SEM 2/java/Assignment 7/webapps/examples] has finished in [526] ms
+08-Apr-2025 11:22:06.656 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/exportspg/mca28/Rajesh's code/SEM 2/java/Assignment 7/webapps/host-manager]
+08-Apr-2025 11:22:06.755 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Apr-2025 11:22:06.757 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/exportspg/mca28/Rajesh's code/SEM 2/java/Assignment 7/webapps/host-manager] has finished in [101] ms
+08-Apr-2025 11:22:06.757 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/exportspg/mca28/Rajesh's code/SEM 2/java/Assignment 7/webapps/ROOT]
+08-Apr-2025 11:22:06.847 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Apr-2025 11:22:06.848 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/exportspg/mca28/Rajesh's code/SEM 2/java/Assignment 7/webapps/ROOT] has finished in [91] ms
+08-Apr-2025 11:22:06.849 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/exportspg/mca28/Rajesh's code/SEM 2/java/Assignment 7/webapps/docs]
+08-Apr-2025 11:22:06.947 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Apr-2025 11:22:06.948 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/exportspg/mca28/Rajesh's code/SEM 2/java/Assignment 7/webapps/docs] has finished in [99] ms
+08-Apr-2025 11:22:06.948 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/exportspg/mca28/Rajesh's code/SEM 2/java/Assignment 7/webapps/manager]
+08-Apr-2025 11:22:07.044 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Apr-2025 11:22:07.046 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/exportspg/mca28/Rajesh's code/SEM 2/java/Assignment 7/webapps/manager] has finished in [98] ms
+08-Apr-2025 11:22:07.047 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+08-Apr-2025 11:22:07.053 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 947 ms
+Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
