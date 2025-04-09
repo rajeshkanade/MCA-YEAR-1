@@ -143,6 +143,11 @@ body {
     padding: 4rem 5%;
     background-color: #f8f9fa;
     text-align: center;
+    width: 100%;
+}
+
+.features .container h2{
+    text-align: left;
 }
 
 .features h2 {
@@ -151,9 +156,11 @@ body {
     color: #2c3e50;
 }
 
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.features-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -200,6 +207,7 @@ body {
     overflow-x: auto;
     padding: 1rem 0;
     scroll-snap-type: x mandatory;
+    justify-content: center;
 }
 
 .testimonial {
@@ -272,8 +280,7 @@ body {
 
 /* Documentation Page Layout */
 .container {
-    display: flex;
-    min-height: calc(100vh - 120px);
+    min-height: 400px;
 }
 
 .sidebar {

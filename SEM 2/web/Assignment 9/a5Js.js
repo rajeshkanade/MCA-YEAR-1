@@ -1,6 +1,6 @@
 // Sample image data (replace with your actual images)
 const images = [
-    { src: 'https://source.unsplash.com/random/600x600/?nature', alt: 'Nature' },
+    { src: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fmagicdecor.in%2Fwallpaper%2Fnature%2F&psig=AOvVaw0xN9XEhmnzAhXOuAM5PZtQ&ust=1744265907624000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJD05YGnyowDFQAAAAAdAAAAABAE', alt: 'Nature' },
     { src: 'https://source.unsplash.com/random/600x600/?city', alt: 'City' },
     { src: 'https://source.unsplash.com/random/600x600/?animal', alt: 'Animal' },
     { src: 'https://source.unsplash.com/random/600x600/?food', alt: 'Food' },

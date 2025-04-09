@@ -19,7 +19,7 @@
       <aside class="sidebar">
         <h2>Documentation Menu</h2>
         <ul>
-          <li><a href="#inheritance">Inheritance</a></li>
+          <li onclick="clickFun()"><a href="#inheritance">Inheritance</a></li>
           <li><a href="#polymorphism">Polymorphism</a></li>
           <li><a href="#encapsulation">Encapsulation</a></li>
         </ul>
@@ -29,27 +29,305 @@
         <section id="inheritance">
           <h2>Inheritance</h2>
           <p>
-            Inheritance is a mechanism in object-oriented programming that
-            allows one class to inherit the properties and methods of another
-            class.
+            Inheritance is a fundamental mechanism in object-oriented
+            programming that allows one class (the subclass or derived class) to
+            inherit the properties (data or attributes) and methods (functions
+            or behaviors) of another class (the superclass or base class). This
+            promotes code reusability and the creation of hierarchical
+            relationships between classes.
           </p>
+          <p>Here's a more in-depth look at the concept of inheritance:</p>
+          <ul>
+            <li>
+              <strong>Code Reusability:</strong> ... (rest of your inheritance
+              description) ...
+            </li>
+            <li><strong>"Is-a" Relationship:</strong> ...</li>
+            <li><strong>Hierarchy of Classes:</strong> ...</li>
+            <li><strong>Extensibility:</strong> ...</li>
+            <li><strong>Polymorphism:</strong> ...</li>
+            <li><strong>Types of Inheritance:</strong> ...</li>
+            <li><strong>Access Modifiers and Inheritance:</strong> ...</li>
+            <li><strong>Method Overriding:</strong> ...</li>
+            <li><strong>`super()` Keyword:</strong> ...</li>
+          </ul>
+          <p>In summary, inheritance is a powerful tool ...</p>
+
+          <pre><code class="language-java">
+  public class Animal {
+      String name;
+      public Animal(String name) { this.name = name; }
+      public void makeSound() { System.out.println("Generic animal sound"); }
+  }
+  
+  public class Dog extends Animal {
+      String breed;
+      public Dog(String name, String breed) { super(name); this.breed = breed; }
+      @Override
+      public void makeSound() { System.out.println("Woof!"); }
+      public void fetch() { System.out.println(name + " is fetching."); }
+  }
+  
+  public class Cat extends Animal {
+      String color;
+      public Cat(String name, String color) { super(name); this.color = color; }
+      @Override
+      public void makeSound() { System.out.println("Meow!"); }
+      public void purr() { System.out.println(name + " is purring."); }
+  }
+  
+  public class InheritanceExample {
+      public static void main(String[] args) {
+          Animal animal1 = new Animal("Generic");
+          Dog dog1 = new Dog("Buddy", "Labrador");
+          Cat cat1 = new Cat("Whiskers", "Tabby");
+  
+          animal1.makeSound(); // Output: Generic animal sound
+          dog1.makeSound();    // Output: Woof! (Overridden)
+          dog1.fetch();        // Output: Buddy is fetching.
+          cat1.makeSound();    // Output: Meow! (Overridden)
+          cat1.purr();         // Output: Whiskers is purring.
+      }
+  }
+          </code></pre>
+          <div class="explanation">
+            <h3>Explanation of Inheritance Code:</h3>
+            <p>This example demonstrates a simple inheritance hierarchy:</p>
+            <ul>
+              <li>`Animal` is the base class with a `makeSound()` method.</li>
+              <li>
+                `Dog` and `Cat` are derived classes that inherit from `Animal`.
+              </li>
+              <li>
+                Both `Dog` and `Cat` override the `makeSound()` method to
+                provide their specific sounds.
+              </li>
+              <li>
+                The `main` method shows how objects of the derived classes can
+                use both inherited and their own methods.
+              </li>
+            </ul>
+          </div>
         </section>
 
         <section id="polymorphism">
           <h2>Polymorphism</h2>
           <p>
-            Polymorphism allows methods to do different things based on the
-            object it is acting upon, even if they share the same name.
+            Polymorphism, meaning "many forms," is the ability of an object to
+            take on many forms. In object-oriented programming, this typically
+            occurs when a superclass reference is used to refer to a subclass
+            object. It allows you to write more flexible and generic code.
           </p>
+          <p>There are two main types of polymorphism:</p>
+          <ul>
+            <li>
+              <strong>Compile-time (Static) Polymorphism:</strong> Achieved
+              through method overloading. Multiple methods in the same class
+              have the same name but different parameters. The compiler
+              determines which method to call based on the arguments passed.
+            </li>
+            <li>
+              <strong>Runtime (Dynamic) Polymorphism:</strong> Achieved through
+              method overriding (as seen in the inheritance example). The actual
+              method to be executed is determined at runtime based on the
+              object's actual type.
+            </li>
+          </ul>
+
+          <pre><code class="language-java">
+  class Shape {
+      public void draw() {
+          System.out.println("Drawing a shape");
+      }
+  }
+  
+  class Circle extends Shape {
+      @Override
+      public void draw() {
+          System.out.println("Drawing a circle");
+      }
+  }
+  
+  class Rectangle extends Shape {
+      @Override
+      public void draw() {
+          System.out.println("Drawing a rectangle");
+      }
+  }
+  
+  class PolymorphismExample {
+      public static void main(String[] args) {
+          Shape s1 = new Shape();
+          Shape s2 = new Circle(); // Upcasting
+          Shape s3 = new Rectangle(); // Upcasting
+  
+          s1.draw(); // Output: Drawing a shape
+          s2.draw(); // Output: Drawing a circle (Runtime Polymorphism)
+          s3.draw(); // Output: Drawing a rectangle (Runtime Polymorphism)
+  
+          // Compile-time Polymorphism (Method Overloading)
+          Calculator calc = new Calculator();
+          System.out.println(calc.add(2, 3));       // Output: 5
+          System.out.println(calc.add(2.5, 3.5));   // Output: 6.0
+          System.out.println(calc.add("Hello ", "World")); // Output: Hello World
+      }
+  }
+  
+  class Calculator {
+      public int add(int a, int b) {
+          return a + b;
+      }
+  
+      public double add(double a, double b) {
+          return a + b;
+      }
+  
+      public String add(String a, String b) {
+          return a + b;
+      }
+  }
+          </code></pre>
+          <div class="explanation">
+            <h3>Explanation of Polymorphism Code:</h3>
+            <p>
+              This example illustrates both runtime and compile-time
+              polymorphism:
+            </p>
+            <ul>
+              <li>
+                <strong>Runtime Polymorphism:</strong> The `Shape`, `Circle`,
+                and `Rectangle` classes demonstrate method overriding. When a
+                `Shape` reference points to a `Circle` or `Rectangle` object,
+                the overridden `draw()` method of the specific subclass is
+                executed at runtime.
+              </li>
+              <li>
+                <strong>Compile-time Polymorphism:</strong> The `Calculator`
+                class demonstrates method overloading. The `add()` method has
+                multiple implementations with different parameter types. The
+                compiler chooses the appropriate `add()` method to call based on
+                the types of the arguments passed in the `main` method.
+              </li>
+            </ul>
+          </div>
         </section>
 
         <section id="encapsulation">
           <h2>Encapsulation</h2>
           <p>
-            Encapsulation is the bundling of data and methods that operate on
-            that data within one unit, such as a class in object-oriented
-            programming.
+            Encapsulation is the mechanism of wrapping data (attributes) and the
+            code that operates on the data (methods) within a single unit, often
+            a class. It also involves controlling the access to the internal
+            data of an object, typically using access modifiers like `private`,
+            `protected`, and `public`.
           </p>
+          <p>The benefits of encapsulation include:</p>
+          <ul>
+            <li>
+              <strong>Data Hiding:</strong> Protecting the internal state of an
+              object from direct external access. This prevents accidental
+              modification of data.
+            </li>
+            <li>
+              <strong>Improved Maintainability:</strong> Changes to the internal
+              implementation of a class do not necessarily affect other parts of
+              the program that use the class, as long as the public interface
+              remains the same.
+            </li>
+            <li>
+              <strong>Increased Flexibility:</strong> You can control how the
+              data is accessed and modified through getter and setter methods,
+              allowing you to add validation or business logic.
+            </li>
+            <li>
+              <strong>Code Reusability:</strong> Well-encapsulated objects can
+              be easily reused in different parts of the program or in other
+              programs.
+            </li>
+          </ul>
+
+          <pre><code class="language-java">
+  class BankAccount {
+      private String accountNumber;
+      private double balance;
+  
+      public BankAccount(String accountNumber, double initialBalance) {
+          this.accountNumber = accountNumber;
+          this.balance = initialBalance;
+      }
+  
+      public String getAccountNumber() {
+          return accountNumber;
+      }
+  
+      public double getBalance() {
+          return balance;
+      }
+  
+      public void deposit(double amount) {
+          if (amount > 0) {
+              balance += amount;
+              System.out.println("Deposited: " + amount + ". New balance: " + balance);
+          } else {
+              System.out.println("Invalid deposit amount.");
+          }
+      }
+  
+      public void withdraw(double amount) {
+          if (amount > 0 && balance >= amount) {
+              balance -= amount;
+              System.out.println("Withdrawn: " + amount + ". New balance: " + balance);
+          } else {
+              System.out.println("Insufficient funds or invalid withdrawal amount.");
+          }
+      }
+  }
+  
+  public class EncapsulationExample {
+      public static void main(String[] args) {
+          BankAccount account = new BankAccount("1234567890", 1000);
+          System.out.println("Account Number: " + account.getAccountNumber());
+          System.out.println("Initial Balance: " + account.getBalance());
+  
+          account.deposit(500);
+          account.withdraw(200);
+          account.withdraw(1500); // Attempt to withdraw more than balance
+  
+          // Trying to directly access private members (will cause a compile-time error)
+          // account.balance = -100;
+      }
+  }
+          </code></pre>
+          <div class="explanation">
+            <h3>Explanation of Encapsulation Code:</h3>
+            <p>
+              This example demonstrates encapsulation in the `BankAccount`
+              class:
+            </p>
+            <ul>
+              <li>
+                The `accountNumber` and `balance` attributes are declared as
+                `private`, making them inaccessible directly from outside the
+                `BankAccount` class. This enforces data hiding.
+              </li>
+              <li>
+                Public getter methods (`getAccountNumber()`, `getBalance()`)
+                provide controlled read access to the private attributes.
+              </li>
+              <li>
+                Public methods `deposit()` and `withdraw()` control how the
+                `balance` attribute is modified. They include logic to ensure
+                the operations are valid (e.g., positive deposit amount,
+                sufficient funds for withdrawal).
+              </li>
+              <li>
+                The `main` method shows how to interact with the `BankAccount`
+                object through its public methods, while attempting to directly
+                access the private `balance` would result in a compile-time
+                error, illustrating the protection provided by encapsulation.
+              </li>
+            </ul>
+          </div>
         </section>
       </main>
     </div>
@@ -58,6 +336,6 @@
       <p>&copy; 2023 Technical Documentation. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script></script>
   </body>
 </html>

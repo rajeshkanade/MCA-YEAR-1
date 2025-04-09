@@ -1,23 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Gallery</title>
-    <link rel="stylesheet" href="a4Style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="a4Style.css" />
+  </head>
+  <body>
     <div class="gallery-container">
-        <h1>Photo Gallery</h1>
-        <div class="gallery-grid" id="gallery">
-            <!-- Images will be added dynamically via JavaScript -->
-        </div>
-        <div class="modal" id="modal">
-            <span class="close-btn" id="closeBtn">&times;</span>
-            <img class="modal-content" id="modalImage">
-            <div class="caption" id="caption"></div>
-        </div>
+      <h1>Photo Gallery</h1>
+      <div class="gallery-grid" id="gallery">
+        <!-- Images will be added dynamically via JavaScript -->
+      </div>
+      <div class="modal" id="modal">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <img class="modal-content" id="modalImage" />
+        <div class="caption" id="caption"></div>
+      </div>
     </div>
-    <script src="a5Js.js"></script>
-</body>
+    <script>
+      // Sample image data (replace with your actual images)
+      const images = [
+        {
+          src: "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_640.jpg",
+          alt: "Nature",
+        },
+        {
+          src: "https://media.istockphoto.com/id/1406960186/photo/the-skyline-of-new-york-city-united-states.jpg?s=612x612&w=0&k=20&c=yZJXNdzq3d5bKgvVzPBahBujpbVUXFyjyl9FN9L7esM=",
+          alt: "City",
+        },
+        {
+          src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3HTgKkm-tBcNbiLG5eCL12nOngY_fEta2BA&s",
+          alt: "Animal",
+        },
+        {
+          src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2o86IDNmk8t6E2yl-5LPK401pby8B2BX0Vg&s",
+          alt: "Food",
+        },
+        {
+          src: "https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?cs=srgb&dl=pexels-freestockpro-3278215.jpg&fm=jpg",
+          alt: "Travel",
+        },
+        {
+          src: "https://media.istockphoto.com/id/635732164/photo/realize-your-interior-dream-mixed-media.jpg?s=612x612&w=0&k=20&c=y9ZeXix7TgOqgsXqlVm0TTjBH57wSIMtAF7EqYAiWOg=",
+          alt: "Architecture",
+        },
+        {
+          src: "https://media.istockphoto.com/id/1439425791/photo/digital-technology-software-development-concept-coding-programmer-working-on-laptop-with.jpg?s=612x612&w=0&k=20&c=43WZfDZcnI2lULx83NVAtFiGyzKHzi4HyLqYZgggX-c=",
+          alt: "Technology",
+        },
+        { src: "https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcGR2YW5nb2doLXNlbGYtcG9ydHJhaXQtbTAxLWpvYjY2MV8yLWwxMDBvNmVmLmpwZw.jpg", alt: "Art" },
+      ];
+
+      // Get DOM elements
+      const gallery = document.getElementById("gallery");
+      const modal = document.getElementById("modal");
+      const modalImage = document.getElementById("modalImage");
+      const caption = document.getElementById("caption");
+      const closeBtn = document.getElementById("closeBtn");
+
+      // Create gallery items
+      function createGallery() {
+        images.forEach((image, index) => {
+          const galleryItem = document.createElement("div");
+          galleryItem.className = "gallery-item";
+
+          const img = document.createElement("img");
+          img.src = image.src;
+          img.alt = image.alt;
+          img.className = "gallery-img";
+          img.dataset.index = index;
+
+          galleryItem.appendChild(img);
+          gallery.appendChild(galleryItem);
+
+          // Add click event to each image
+          img.addEventListener("click", () => {
+            openModal(image.src, image.alt);
+          });
+        });
+      }
+
+      // Open modal with clicked image
+      function openModal(src, alt) {
+        modal.style.display = "block";
+        modalImage.src = src;
+        caption.textContent = alt;
+        document.body.style.overflow = "hidden";
+      }
+
+      // Close modal
+      function closeModal() {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+
+      // Event listeners
+      closeBtn.addEventListener("click", closeModal);
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+
+      // Keyboard navigation
+      document.addEventListener("keydown", (e) => {
+        if (modal.style.display === "block") {
+          if (e.key === "Escape") {
+            closeModal();
+          }
+        }
+      });
+
+      // Initialize gallery
+      createGallery();
+    </script>
+  </body>
 </html>
